@@ -1,7 +1,13 @@
 import { Flight } from "../models/flight.js"
 
 function index(req, res) {
-  console.log()
+  Flight.find({}, function(error, flights) {
+    res.render("flights/index", {
+      flights,
+      error,
+      title: "All Flights",
+    })
+  })
 }
 
 function newFlight(req, res) {
@@ -11,6 +17,7 @@ function newFlight(req, res) {
 }
 
 function create(req, res) {
+  console.log("flight", req.body)
   Flight.create(req.body, function(error, flight) {
     if (error) {
       console.log(error)
