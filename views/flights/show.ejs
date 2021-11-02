@@ -19,8 +19,8 @@
     action="/flights/<%= flight._id %>/tickets"
     method="POST"
   >
-  <label for="seat">Seat (A1-F99): </label>
-  <input name="seat" required pattern="[A-F][1-9]\d?">
+  <label for="seat">Seat: </label>
+  <input name="seat" required pattern="[A-F][1-9]\d?" placeholder="A1-F99">
   <label for="price">Price: </label>
   <input type="number" min="0" name="price">
   <button type="submit">Submit</button>
