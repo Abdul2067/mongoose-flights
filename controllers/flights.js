@@ -29,6 +29,7 @@ function create(req, res) {
 
 function show(req, res) {
   Flight.findById(req.params.id, function(err, flight) {
+    console.log("this flight", flight)
     res.render("flights/show", {
       title: "Flight Details",
       flight,
@@ -36,9 +37,36 @@ function show(req, res) {
   })
 }
 
+function createTicket(req, res) {
+  Flight.findById(req.params.id, function(error, flight) {
+    flight.tickets.push(req.body)
+    flight.save(function(err) {
+      res.redirect(`/flights/${flight._id}`)
+    })
+  })
+}
+
+function deleteFlight(req, res) {
+  Flight.findByIdAndDelete(req.params.id, function(error, flight) {
+    res.redirect("/flights")
+  })
+}
+
+// function deleteTicket(req, res) {
+//   Flight.findByIdAndDelete(req.params.id, function(error, flight) {
+//     flight.tickets.delete(req.body)
+//     flight.save(function(err) {
+//       res.redirect(`/flights/${flight._id}`)
+//     })
+//   })
+// }
+
 export {
   index,
   newFlight as new,
   create,
-  show
+  show,
+  createTicket,
+  deleteFlight as delete,
+  // deleteTicket,
 }

@@ -1,6 +1,10 @@
 <%- include("../partials/html-head") %>
-<%- include("../partials/nav") %>
 
+<link rel="stylesheet" href="/stylesheets/flights/new.css">
+
+
+<%- include("../partials/nav") %>
+<main>
   <h1>Enter a New Flight</h1>
   <form action="/flights" method="POST">
   <label>Airline:
@@ -27,5 +31,5 @@
   </label>
   <button type="submit">Submit</button>
   </form>
-
+</main>
   <%- include("../partials/footer") %> 
