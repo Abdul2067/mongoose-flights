@@ -10,8 +10,9 @@ function newDestination(req, res) {
 }
 
 function create(req, res) {
-  console.log(req.body)
-  console.log("Creating Destination")
+  Destination.create(req.body, function(err, destination) {
+    res.redirect("/destinations/new")
+  })
 }
 
 export {

@@ -1,0 +1,31 @@
+form {
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, minmax(auto, 35.2rem));
+  font-size: 2rem;
+}
+
+form * {
+  padding: 3px;
+  border-radius: 5px;
+  font-size: 2rem;
+}
+
+form > button {
+  grid-column: span 2;
+  width: 15rem;
+  margin-left: auto;
+  font-size: 1.5rem;
+}
+
+button {
+  margin-top: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#airport-dropdown {
+  padding: 3px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}

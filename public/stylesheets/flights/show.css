@@ -1,14 +1,5 @@
-ul {
-  margin: 0 0 1.6rem;
-  padding: 0;
-  list-style: none;
-}
 
-li {
-  font-weight: bold;
-}
-
-table {
+ table {
   font-size: 2rem;
 }
 
@@ -27,28 +18,24 @@ form * {
   border-radius: 5px;
 }
 
-section {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 1.6rem;
+ul {
+  margin: 0 0 1.6rem;
+  padding: 0;
+  list-style: none;
 }
 
-section div:nth-child(even) {
-  font-weight: bold;
-}
-
-#add-flight-form {
+  #add-ticket-form {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 1.6rem;
   margin-bottom: 2rem
 }
 
-#add-flight-form > textarea {
+#add-ticket-form > textarea {
   width: 25rem;
 }
 
-#add-flight-form > button {
+#add-ticket-form > button {
   font-size: 1.6rem;
   width: 16rem;
   grid-column: 2 / 3;

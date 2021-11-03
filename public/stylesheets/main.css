@@ -4,7 +4,7 @@ html {
 
 /* The Universal Selector */
 *, /* All elements*/
-*::before, /* All ::before pseudo-elements */
+ /* All ::before pseudo-elements */
 *::after { /* All ::after pseudo-elements */
   /* height & width will now include border & padding by default
      but can be over-ridden as needed */
@@ -32,6 +32,10 @@ body {
     "main";
   font-size: 1.8rem;
   text-align: center;
+}
+
+h1 {
+  text-shadow: 2.5px 2.5px 5px black;
 }
 
 body > main {
